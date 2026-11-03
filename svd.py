@@ -77,3 +77,8 @@ X_approx += np.mean(X, axis=0)
 
 print("\nMatrice reconstruite :")
 print(X_approx)
+
+## Cas d'usage
+## 2500 observation 
+## 38 variables
+## reduction de dimension 38 à 3 ?
