@@ -54,7 +54,7 @@ for i, r in enumerate(explained_variance_ratio):
 
 
 
-## Reduction de dimension
+## Reduction de dimension : on passe de 4 à 2
 
 k = 2
 
@@ -77,6 +77,10 @@ X_approx += np.mean(X, axis=0)
 
 print("\nMatrice reconstruite :")
 print(X_approx)
+
+## Rem. A première vue, la matrice observationxvariabless reconstruite dépend de l'ensemble des observations. Faut-il traiter découper le problème en sous problèmes en fonction des paramètres dont dépendent les observations.
+
+
 
 ## Cas d'usage
 ## 2500 observation 
