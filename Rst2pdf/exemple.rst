@@ -1,11 +1,19 @@
 test de doc rst2pdf
 ===================
 
+**Author :** Jean Dupont
+
+**Date :** 24 novembre 2026 
+
 .. sectnum::
 .. contents:: Sommaire
    :depth: 3
 
+.. role:: rouge
 
+.. footer:: ###Page###
+   
+	   
 Introduction
 ------------
 
@@ -20,7 +28,7 @@ On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équatio
 
 .. math::
 
-   \sin^2+\cos^2=1
+   \sin^2\theta+\cos^2\theta=1
 
 |
 
@@ -29,6 +37,19 @@ On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équatio
    Ceci est un paragraphe en rouge qui peut
    
    s'étaler sur plusieurs lignes !
+
+On peut aussi ecrire des mots :rouge:`en rouge` sous réserve d'avoir déclaré dans le fichier ``rst`` ::
+
+  ..role:: rouge
+
+et d'avoir créé un fichier style ``mystyle`` qui contient :
+
+.. code-block:: yaml
+
+   styles:
+     rouge:
+      textColor: red   
+
 
 .. _tableaux:
 
@@ -55,7 +76,7 @@ Tableaux
 
 
 
-Voir le tableau `[1] <tab-voiliers_>`_ qui est décrit à la section   `[2] <tableaux_>`_ 
+Voir le tableau `[1] <tab-voiliers_>`_ qui est décrit à la section `[2] <tableaux_>`_ 
 
 Codeblock
 ---------
@@ -91,4 +112,4 @@ Références
 [2] Lamport, L. LaTeX: A Document Preparation System. Addison-Wesley, 1994.
 
 
-.. rst2pdf exemple.rst --footer="Page ###Page###" -s mystyle -l fr -v
+.. rst2pdf exemple.rst  -s mystyle -l fr -v
