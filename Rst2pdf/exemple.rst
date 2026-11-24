@@ -1,5 +1,5 @@
-test de doc rst2pdf
-===================
+Exmple de document rst2pdf
+==========================
 
 **Author :** Jean Dupont
 
