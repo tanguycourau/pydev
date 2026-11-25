@@ -51,6 +51,19 @@ et d'avoir créé un fichier style ``mystyle`` qui contient :
       textColor: red   
 
 
+
+et enfin un fichier de config ``~/.rsr2pdf/config`` qui contient :
+
+.. code-block:: ini
+
+   [general]
+   # Language to be used for hyphenation support
+   language="fr"
+
+
+Tout cela permet de traduire le fichier ``exemple.rst`` à l'aide de la commande : ``rst2pdf exemple.rst -s mystyle -v``
+
+      
 .. _tableaux:
 
 Tableaux
@@ -82,6 +95,7 @@ Codeblock
 ---------
 
 .. code-block:: python
+   :linenos:
 
    gv = 35.0      # Grand-voile (m²)
    foc = 28.0     # Foc (m²)
@@ -112,4 +126,4 @@ Références
 [2] Lamport, L. LaTeX: A Document Preparation System. Addison-Wesley, 1994.
 
 
-.. rst2pdf exemple.rst  -s mystyle -l fr -v
+.. rst2pdf exemple.rst  -s mystyle  -v
