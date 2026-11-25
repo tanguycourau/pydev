@@ -63,6 +63,13 @@ et enfin un fichier de config ``~/.rsr2pdf/config`` qui contient :
 
 Tout cela permet de traduire le fichier ``exemple.rst`` à l'aide de la commande : ``rst2pdf exemple.rst -s mystyle -v``
 
+
+Une liste énumérée automatiquement
+
+ #. Un
+ #. Deux
+ #. Trois
+
       
 .. _tableaux:
 
@@ -109,8 +116,14 @@ Codeblock
 
    PageBreak
 
-   
-Un joli saut de page
+
+
+.. note::
+
+   Un joli saut de page suivi d'un trait
+
+
+============   
 
 
 
