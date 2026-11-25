@@ -23,7 +23,7 @@ la méthode décrite par Knuth `[1] <ref1_>`_ reste une référence importante.
 On peut également citer plusieurs sources `[1] <ref1_>`_  `[2] <ref2_>`_.
 
 
-On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équations
+On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équations : 
 
 
 .. math::
@@ -96,7 +96,7 @@ Tableaux
 
 
 
-Voir le tableau `[1] <tab-voiliers_>`_ qui est décrit à la section `[2] <tableaux_>`_ 
+Voir le tableau `[1] <tab-voiliers_>`_ qui est décrit à la section `[2] <tableaux_>`_. 
 
 Codeblock
 ---------
@@ -116,9 +116,11 @@ Codeblock
 
    PageBreak
 
-
-
 .. note::
+
+   Une petite note !
+
+.. warning::
 
    Un joli saut de page suivi d'un trait
 
