@@ -18,13 +18,25 @@ Exmple de document rst2pdf
 Introduction
 ------------
 
-rst2pdf permet de gérer des références bibliographiques. Par exemple,
-la méthode décrite par Knuth `[1] <ref1_>`_ reste une référence importante.
+L'utilitaire ``rst2pdf`` permet de taduire documents au format ``rst`` vers le format ``pdf``.
+C'est moins riche que latex ou sphinx mais c'est pas mal et très direct.
+
+Le présent document  montre un certains nombre de possibilités de l'outil, à commencer par la gestion des références bibliographiques.
+
+Bibliographie
+-------------
+
+Par exemple, la méthode décrite par Knuth `[1] <ref1_>`_ reste une référence importante.
 
 On peut également citer plusieurs sources [`1 <ref1_>`_, `2 <ref2_>`_].
 
 
-On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équations : 
+
+
+Math
+----
+
+On peut faire des  ``:math:`` inline : :math:`e^{i\pi}+1=0` et également des équations : 
 
 
 .. math::
@@ -35,15 +47,26 @@ On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équatio
 .. |pi|  unicode:: U+03C0 
 .. |Delta| unicode:: U+0394
 
-La directive *inline math* en ligne produit des images et ce n'est pas très joli, il est préférable d'utiliser l'alphabet grec quand c'est possible : e\ :sup:`iπ` +1=0, mais  |pi| > 1.
+La directive ``:math:``  produit des images et ce n'est pas très joli, il est préférable d'utiliser l'alphabet grec quand c'est possible : e\ :sup:`iπ` +1=0, avec  |pi| > 1.
+
+
 
 
 .. note::
 
-   Il y a un problème avec pi  qui renvoie π avec ``rst2pdf`` selon l'environnement informatique.
-   Même chose pour Delta qui donne |Delta| ... probablement lié à un problème de font.
+   Il y a un problème avec \\pi qui donne π selon l'environnement informatique.
+   
+   Même chose pour \\Delta qui donne |Delta| ...
+   
+   Probablement lié à un problème de font. Voir ``pdffont exemple.pdf``
 
-On peut forcer les espaces entre
+
+
+Formattage et configuration
+---------------------------
+
+   
+On peut forcer les espaces verticaux entre
 
 |
 
@@ -67,7 +90,9 @@ et d'avoir créé un fichier style ``mystyle`` qui contient :
    styles:
      rouge:
       textColor: red   
-
+     base:
+      fontName: DejaVuSerif
+      fontSize: 11
 
 
 et enfin un fichier de config ``~/.rsr2pdf/config`` qui contient :
