@@ -15,6 +15,12 @@ Exmple de document rst2pdf
 
 .. |thedate| date:: %d/%m/%Y
 
+============
+
+|
+
+
+		    
 Introduction
 ------------
 
@@ -23,13 +29,15 @@ C'est moins riche que latex ou sphinx mais c'est pas mal et très direct.
 
 Le présent document  montre un certains nombre de possibilités de l'outil, à commencer par la gestion des références bibliographiques.
 
+
+anticonstitutionnellement anticonstitutionnellement anticonstitutionnellement anticonstitutionnellement 
+
 Bibliographie
 -------------
 
 Par exemple, la méthode décrite par Knuth `[1] <ref1_>`_ reste une référence importante.
 
 On peut également citer plusieurs sources [`1 <ref1_>`_, `2 <ref2_>`_].
-
 
 
 
@@ -107,13 +115,21 @@ et enfin un fichier de config ``~/.rsr2pdf/config`` qui contient :
 Tout cela permet de traduire le fichier ``exemple.rst`` à l'aide de la commande : ``rst2pdf exemple.rst -s mystyle -v``
 
 
-Une liste énumérée automatiquement
+
+Une liste *énumérée* **automatiquement**
 
  #. Un
  #. Deux
  #. Trois
 
 
+Suivie d'un saut de page !
+
+.. raw:: pdf
+
+   PageBreak
+
+   
 Compteurs
 ---------
 
@@ -147,11 +163,8 @@ Tableaux
 
 Le référence à `Tab. 3 <#tables-3>`_  utilise un compteur  initialisé à 3 en l'occurence. 
 
-
     
      
-
-   
 Codeblock
 ---------
 
@@ -166,10 +179,10 @@ Codeblock
    print(f"Surface totale : {surface_totale:.1f} m²")
 
 
-.. raw:: pdf
-
-   PageBreak
-
+   
+Note et Warning
+---------------
+   
 .. note::
 
    Une petite note !
@@ -179,11 +192,11 @@ Codeblock
    Un joli saut de page suivi d'un trait
 
 
-============   
+
 
 Et encore un lien vers le tableau `3  <#tables-3>`_ pour fin de test, on peut également accéder à la `Sec. 2 <tablesec_>`_.  
 
-
+-------------------------
 
 Références
 ----------

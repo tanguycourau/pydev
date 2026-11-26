@@ -4,3 +4,5 @@ styles:
   base:
     fontName: Helvetica
     fontSize: 11
+    hyphenationLang: fr
+    embeddedHyphenation: 1
