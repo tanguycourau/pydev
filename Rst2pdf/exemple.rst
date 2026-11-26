@@ -30,7 +30,20 @@ On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équatio
 
    \sin^2\theta+\cos^2\theta=1
 
+
+
+.. |pi|  unicode:: U+03A0   
+
+Les math en ligne produisent des images et c'est pas très joli, il est préférable d'utiliser l'alphabet grec quand c'est possible : e\ :sup:`i Π` +1=0 
+
+
+.. note::
+
+   Il y a un problème avec pi dont l'unicode est : U+03C0 et qui renvoie π avec ``rst2pdf`` alternativement le caractère majuscule |pi| s'affiche également via l'unicode U+03A0.  
+
 |
+
+
 
 .. class:: rouge
 
@@ -70,16 +83,24 @@ Une liste énumérée automatiquement
  #. Deux
  #. Trois
 
-      
-.. _tableaux:
+
+Compteurs
+---------
+
+Il est possible de définir un compteur tels que l'initialisation du compteur Figure :counter:`figures`, on peut y référer à l'aide du
+lien `Figure 1 <#figures-1>`_. Si on créee une seconde figure, alors le compteur s'incrémente automatiquement Figure :counter:`figures`
+et on peut y référeer  à l'aide du lien `Fig. 2 <#figures-2>`_.
+
+.. note::
+   Le lien vers un compteur doit préciser la valeur du compteur, il n'est pas mis à jour automatiquement.
+
+
+.. _tablesec:
 
 Tableaux
 --------
 
-
-.. _tab-voiliers:
-
-.. table:: Table 1 - Comparatif de voiliers
+.. table:: Table :counter:`tables:3` - Comparatif de voiliers
 
 
    +-----------+--------+--------+
@@ -94,10 +115,13 @@ Tableaux
 	   
 
 
+Le référence à `Tab. 3 <#tables-3>`_  utilise un compteur  initialisé à 3 en l'occurence. 
 
 
-Voir le tableau `[1] <tab-voiliers_>`_ qui est décrit à la section `[2] <tableaux_>`_. 
+    
+     
 
+   
 Codeblock
 ---------
 
@@ -126,6 +150,8 @@ Codeblock
 
 
 ============   
+
+Et encore un lien vers le tableau `3  <#tables-3>`_ pour fin de test, on peut également accéder à la `Sec. 2 <tablesec_>`_.  
 
 
 
