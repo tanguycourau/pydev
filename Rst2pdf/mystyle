@@ -1,5 +1,6 @@
 styles:
   rouge:
     textColor: red
-
-
+  base:
+    fontName: Helvetica
+    fontSize: 11

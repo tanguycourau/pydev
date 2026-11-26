@@ -1,9 +1,9 @@
 Exmple de document rst2pdf
 ==========================
 
-**Author :** Jean Dupont
+**Author :** Tanguy Courau
 
-**Date :** 24 novembre 2026 
+**Date :** |thedate|
 
 .. sectnum::
 .. contents:: Sommaire
@@ -13,7 +13,7 @@ Exmple de document rst2pdf
 
 .. footer:: ###Page###
 
-
+.. |thedate| date:: %d/%m/%Y
 
 Introduction
 ------------
@@ -29,23 +29,25 @@ On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équatio
 
 .. math::
 
-   \sin^2\theta+\cos^2\theta=1
+   \sin^2\theta+\cos^2\theta=1 \quad \mathrm{ et } \quad \int_0^1 xdx=1/2
 
 
-
-.. |pi|  unicode:: U+03A0
+.. |pi|  unicode:: U+03C0 
 .. |Delta| unicode:: U+0394
 
-Les math en ligne produisent des images et c'est pas très joli, il est préférable d'utiliser l'alphabet grec quand c'est possible : e\ :sup:`i Π` +1=0 
+La directive *inline math* en ligne produit des images et ce n'est pas très joli, il est préférable d'utiliser l'alphabet grec quand c'est possible : e\ :sup:`iπ` +1=0, mais  |pi| > 1.
 
 
 .. note::
 
-   Il y a un problème avec pi dont l'unicode est : U+03C0 et qui renvoie π avec ``rst2pdf`` alternativement le caractère majuscule |pi| s'affiche également via l'unicode U+03A0.
+   Il y a un problème avec pi  qui renvoie π avec ``rst2pdf`` selon l'environnement informatique.
    Même chose pour Delta qui donne |Delta| ... probablement lié à un problème de font.
+
+On peut forcer les espaces entre
 
 |
 
+des lignes.
 
 
 .. class:: rouge
