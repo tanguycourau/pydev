@@ -12,15 +12,16 @@ Exmple de document rst2pdf
 .. role:: rouge
 
 .. footer:: ###Page###
-   
-	   
+
+
+
 Introduction
 ------------
 
 rst2pdf permet de gérer des références bibliographiques. Par exemple,
 la méthode décrite par Knuth `[1] <ref1_>`_ reste une référence importante.
 
-On peut également citer plusieurs sources `[1] <ref1_>`_  `[2] <ref2_>`_.
+On peut également citer plusieurs sources [`1 <ref1_>`_, `2 <ref2_>`_].
 
 
 On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équations : 
@@ -32,14 +33,16 @@ On peut faire des maths en ligne :math:`e^{i\pi}+1=0` et également des équatio
 
 
 
-.. |pi|  unicode:: U+03A0   
+.. |pi|  unicode:: U+03A0
+.. |Delta| unicode:: U+0394
 
 Les math en ligne produisent des images et c'est pas très joli, il est préférable d'utiliser l'alphabet grec quand c'est possible : e\ :sup:`i Π` +1=0 
 
 
 .. note::
 
-   Il y a un problème avec pi dont l'unicode est : U+03C0 et qui renvoie π avec ``rst2pdf`` alternativement le caractère majuscule |pi| s'affiche également via l'unicode U+03A0.  
+   Il y a un problème avec pi dont l'unicode est : U+03C0 et qui renvoie π avec ``rst2pdf`` alternativement le caractère majuscule |pi| s'affiche également via l'unicode U+03A0.
+   Même chose pour Delta qui donne |Delta| ... probablement lié à un problème de font.
 
 |
 
