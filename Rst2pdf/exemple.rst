@@ -20,7 +20,6 @@ Exmple de document rst2pdf
 |
 
 
-		    
 Introduction
 ------------
 
@@ -30,7 +29,6 @@ C'est moins riche que latex ou sphinx mais c'est pas mal et très direct.
 Le présent document  montre un certains nombre de possibilités de l'outil, à commencer par la gestion des références bibliographiques.
 
 
-anticonstitutionnellement anticonstitutionnellement anticonstitutionnellement anticonstitutionnellement 
 
 Bibliographie
 -------------
@@ -44,7 +42,7 @@ On peut également citer plusieurs sources [`1 <ref1_>`_, `2 <ref2_>`_].
 Math
 ----
 
-On peut faire des  ``:math:`` inline : :math:`e^{i\pi}+1=0` et également des équations : 
+On peut faire des  ``:math:`` inline : :math:`e^{i\pi}+1=0` et également des équations :
 
 
 .. math::
@@ -52,39 +50,42 @@ On peut faire des  ``:math:`` inline : :math:`e^{i\pi}+1=0` et également des é
    \sin^2\theta+\cos^2\theta=1 \quad \mathrm{ et } \quad \int_0^1 xdx=1/2
 
 
-.. |pi|  unicode:: U+03C0 
+.. |pi|  unicode:: U+03C0
 .. |Delta| unicode:: U+0394
 
 La directive ``:math:``  produit des images et ce n'est pas très joli, il est préférable d'utiliser l'alphabet grec quand c'est possible : e\ :sup:`iπ` +1=0, avec  |pi| > 1.
 
 
 
-
 .. note::
 
-   Il y a un problème avec \\pi qui donne π selon l'environnement informatique.
-   
-   Même chose pour \\Delta qui donne |Delta| ...
-   
-   Probablement lié à un problème de font. Voir ``pdffont exemple.pdf``
+   Il y a un problème avec \\pi et \\Delta qui donnent : π et Δ selon l'environnement informatique et le choix de la fonte associée à ``matplotlib.font_manager``.
+
+
+   La fonte **georgia** est satisfaisante, la commande ``pdffont exemple.pdf`` permet d'identifier les fontes dans un document pdf.
 
 
 
 Formattage et configuration
 ---------------------------
 
-   
-On peut forcer les espaces verticaux entre
+
+On peut forcer les espaces verticaux entre des lignes à l'aide du caractère ``|``.
 
 |
 
-des lignes.
+
+et insérer des sauts de page avec la directive ::
+
+   .. raw:: pdf
+
+      PageBreak
 
 
 .. class:: rouge
 
    Ceci est un paragraphe en rouge qui peut
-   
+
    s'étaler sur plusieurs lignes !
 
 On peut aussi ecrire des mots :rouge:`en rouge` sous réserve d'avoir déclaré dans le fichier ``rst`` ::
@@ -97,9 +98,9 @@ et d'avoir créé un fichier style ``mystyle`` qui contient :
 
    styles:
      rouge:
-      textColor: red   
+      textColor: red
      base:
-      fontName: DejaVuSerif
+      fontName: georgia
       fontSize: 11
 
 
@@ -115,6 +116,26 @@ et enfin un fichier de config ``~/.rsr2pdf/config`` qui contient :
 Tout cela permet de traduire le fichier ``exemple.rst`` à l'aide de la commande : ``rst2pdf exemple.rst -s mystyle -v``
 
 
+.. raw:: pdf
+
+   PageBreak
+
+
+Listes
+------
+
+
+Des listes imbriquées
+
+ - Ligne 1
+ - Ligne 2
+ - Ligne 3
+
+    + Sous item 1
+    + Sous item 2
+
+|
+
 
 Une liste *énumérée* **automatiquement**
 
@@ -123,13 +144,21 @@ Une liste *énumérée* **automatiquement**
  #. Trois
 
 
-Suivie d'un saut de page !
 
-.. raw:: pdf
 
-   PageBreak
 
-   
+
+
+Hyperliens
+----------
+
+- La page web `github <https://gist.github.com/jwodder/5a9264db8c3c81dad4c01e082515a9f1#intra-document-links>`_ explicite la gestion des liens en détail.
+
+- Les titres de section du document sont accessibles directement : `Hyperliens`_, il n'est donc pas necessaire de créer une référence interne telle que  ::
+
+    .. _hyperliensec:
+
+
 Compteurs
 ---------
 
@@ -141,7 +170,6 @@ et on peut y référeer  à l'aide du lien `Fig. 2 <#figures-2>`_.
    Le lien vers un compteur doit préciser la valeur du compteur, il n'est pas mis à jour automatiquement.
 
 
-.. _tablesec:
 
 Tableaux
 --------
@@ -157,14 +185,14 @@ Tableaux
    | X-37      | 11.35  | 2.10   |
    +-----------+--------+--------+
    | Salona 37 | 11.29  | 2.28   |
-   +-----------+--------+--------+	
-	   
+   +-----------+--------+--------+
 
 
-Le référence à `Tab. 3 <#tables-3>`_  utilise un compteur  initialisé à 3 en l'occurence. 
 
-    
-     
+Le référence à `Tab. 3 <#tables-3>`_  utilise un compteur  initialisé à 3 en l'occurence.
+
+
+
 Codeblock
 ---------
 
@@ -179,10 +207,10 @@ Codeblock
    print(f"Surface totale : {surface_totale:.1f} m²")
 
 
-   
+
 Note et Warning
 ---------------
-   
+
 .. note::
 
    Une petite note !
@@ -194,7 +222,8 @@ Note et Warning
 
 
 
-Et encore un lien vers le tableau `3  <#tables-3>`_ pour fin de test, on peut également accéder à la `Sec. 2 <tablesec_>`_.  
+
+Et encore un lien vers le tableau `3  <#tables-3>`_ pour fin de test, on peut également accéder à la section `8 <Tableaux_>`_.
 
 -------------------------
 
