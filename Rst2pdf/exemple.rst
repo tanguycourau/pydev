@@ -52,6 +52,8 @@ On peut faire des  ``:math:`` inline : :math:`e^{i\pi}+1=0` et également des é
 
 .. |pi|  unicode:: U+03C0
 .. |Delta| unicode:: U+0394
+.. |phi|  unicode:: U+03A6
+.. |varphi| unicode:: U+03C6		    
 
 La directive ``:math:``  produit des images et ce n'est pas très joli, il est préférable d'utiliser l'alphabet grec quand c'est possible : e\ :sup:`iπ` +1=0, avec  |pi| > 1.
 
@@ -59,7 +61,8 @@ La directive ``:math:``  produit des images et ce n'est pas très joli, il est p
 
 .. note::
 
-   Il y a un problème avec \\pi et \\Delta qui donnent : π et Δ selon l'environnement informatique et le choix de la fonte associée à ``matplotlib.font_manager``.
+   Il y a un problème avec (\\pi, \\Delta, \\phi, \\varphi)  : π, Δ, Φ, φ  ou (|pi|, |Delta|, |phi|, |varphi|) selon l'environnement informatique et le choix
+   de la fonte associée à ``matplotlib.font_manager``.
 
 
    La fonte **georgia** est satisfaisante, la commande ``pdffont exemple.pdf`` permet d'identifier les fontes dans un document pdf.
