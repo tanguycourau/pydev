@@ -1,8 +1,14 @@
 styles:
-  rouge:
+  red:
     textColor: red
   base:
     fontName: arial
     fontSize: 11
     hyphenationLang: fr
     embeddedHyphenation: 1
+  borderlesstable:
+    commands:
+      - [GRID, [0,0], [-1,-1], 0, white]
+      - [BOX, [0,0], [-1,-1], 0, white]
+      - [LINEABOVE, [0,0], [-1,-1], 0, white]
+      - [LINEBELOW, [0,0], [-1,-1], 0, white]

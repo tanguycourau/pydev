@@ -9,7 +9,7 @@ Exmple de document rst2pdf
 .. contents:: Sommaire
    :depth: 3
 
-.. role:: rouge
+.. role:: red
 
 .. footer:: ###Page###
 
@@ -87,22 +87,22 @@ et insérer des sauts de page avec la directive ::
       PageBreak
 
 
-.. class:: rouge
+.. class:: red
 
    Ceci est un paragraphe en rouge qui peut
 
    s'étaler sur plusieurs lignes !
 
-On peut aussi ecrire des mots :rouge:`en rouge` sous réserve d'avoir déclaré dans le fichier ``rst`` ::
+On peut aussi ecrire des mots :red:`en rouge` sous réserve d'avoir déclaré dans le fichier ``rst`` ::
 
-  ..role:: rouge
+  ..role:: red
 
 et d'avoir créé un fichier style ``mystyle`` qui contient :
 
 .. code-block:: yaml
 
    styles:
-     rouge:
+     red:
       textColor: red
      base:
       fontName: georgia
@@ -196,6 +196,13 @@ Tableaux
 
 Le référence à `Tab. 3 <#tables-3>`_  utilise un compteur  initialisé à 3 en l'occurence.
 
+.. class:: borderlesstable
+	   
+   +-------------------------------------------+-------------------+
+   | .. math::                                 | \(:counter:`eq`\) |
+   |                                           |                   |
+   |    E = mc^2                               |                   |
+   +-------------------------------------------+-------------------+
 
 
 Codeblock
