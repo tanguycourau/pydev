@@ -61,11 +61,10 @@ La directive ``:math:``  produit des images et ce n'est pas très joli, il est p
 
 .. note::
 
-   Il y a un problème avec (\\pi, \\Delta, \\Phi, \\varphi, \\phi)  : π, Δ, Φ, φ, ϕ   ou (|pi|, |Delta|, |Phi|, |varphi|, |phi|) selon l'environnement informatique et le choix
-   de la fonte associée à ``matplotlib`` :
+   Il y a un problème avec (\\pi, \\Delta, \\Phi, \\varphi, \\phi)  : π, Δ, Φ, φ, ϕ   ou (|pi|, |Delta|, |Phi|, |varphi|, |phi|) selon
+   l'environnement informatique et le choixde la fonte associée à ``matplotlib`` :
 
    ``import matplotlib.font_manager as fm; fonts = sorted(set(f.name for f in fm.fontManager.ttflist))``
-
 
    La fonte **arial** est satisfaisante, la commande ``pdffont exemple.pdf`` permet d'identifier les fontes dans un document pdf.
 
@@ -151,9 +150,6 @@ Une liste *énumérée* **automatiquement**
 
 
 
-
-
-
 Hyperliens
 ----------
 
@@ -174,13 +170,10 @@ et on peut y référeer  à l'aide du lien `Fig. 2 <#figures-2>`_.
 .. note::
    Le lien vers un compteur doit préciser la valeur du compteur, il n'est pas mis à jour automatiquement.
 
-
-
 Tableaux
 --------
 
 .. table:: Table :counter:`tables:3` - Comparatif de voiliers
-
 
    +-----------+--------+--------+
    | Modèle    | LC (m) | TE (m) |
@@ -192,18 +185,15 @@ Tableaux
    | Salona 37 | 11.29  | 2.28   |
    +-----------+--------+--------+
 
-
-
 Le référence à `Tab. 3 <#tables-3>`_  utilise un compteur  initialisé à 3 en l'occurence.
 
 .. class:: borderlesstable
 	   
    +-------------------------------------------+-------------------+
-   | .. math::                                 | \(:counter:`eq`\) |
-   |                                           |                   |
+   | .. math::                                 |                   |
+   |                                           | \(:counter:`eq`\) |
    |    E = mc^2                               |                   |
    +-------------------------------------------+-------------------+
-
 
 Codeblock
 ---------
@@ -219,7 +209,6 @@ Codeblock
    print(f"Surface totale : {surface_totale:.1f} m²")
 
 
-
 Note et Warning
 ---------------
 
@@ -230,10 +219,6 @@ Note et Warning
 .. warning::
 
    Un joli saut de page suivi d'un trait
-
-
-
-
 
 Et encore un lien vers le tableau `3  <#tables-3>`_ pour fin de test, on peut également accéder à la section `8 <Tableaux_>`_.
 
@@ -250,5 +235,5 @@ Références
 
 [2] Lamport, L. LaTeX: A Document Preparation System. Addison-Wesley, 1994.
 
+.. rst2pdf exemple.rst -s mystyle  -v
 
-.. rst2pdf exemple.rst  -s mystyle  -v
