@@ -52,20 +52,22 @@ On peut faire des  ``:math:`` inline : :math:`e^{i\pi}+1=0` et également des é
 
 .. |pi|  unicode:: U+03C0
 .. |Delta| unicode:: U+0394
-.. |phi|  unicode:: U+03A6
+.. |Phi|  unicode:: U+03A6
 .. |varphi| unicode:: U+03C6		    
-
+.. |phi| unicode:: U+03D5
+	  
 La directive ``:math:``  produit des images et ce n'est pas très joli, il est préférable d'utiliser l'alphabet grec quand c'est possible : e\ :sup:`iπ` +1=0, avec  |pi| > 1.
-
 
 
 .. note::
 
-   Il y a un problème avec (\\pi, \\Delta, \\phi, \\varphi)  : π, Δ, Φ, φ  ou (|pi|, |Delta|, |phi|, |varphi|) selon l'environnement informatique et le choix
-   de la fonte associée à ``matplotlib.font_manager``.
+   Il y a un problème avec (\\pi, \\Delta, \\Phi, \\varphi, \\phi)  : π, Δ, Φ, φ, ϕ   ou (|pi|, |Delta|, |Phi|, |varphi|, |phi|) selon l'environnement informatique et le choix
+   de la fonte associée à ``matplotlib`` :
+
+   ``import matplotlib.font_manager as fm; fonts = sorted(set(f.name for f in fm.fontManager.ttflist))``
 
 
-   La fonte **georgia** est satisfaisante, la commande ``pdffont exemple.pdf`` permet d'identifier les fontes dans un document pdf.
+   La fonte **arial** est satisfaisante, la commande ``pdffont exemple.pdf`` permet d'identifier les fontes dans un document pdf.
 
 
 

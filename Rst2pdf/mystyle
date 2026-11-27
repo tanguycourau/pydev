@@ -2,7 +2,7 @@ styles:
   rouge:
     textColor: red
   base:
-    fontName: georgia
+    fontName: arial
     fontSize: 11
     hyphenationLang: fr
     embeddedHyphenation: 1
